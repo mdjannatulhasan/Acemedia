@@ -1,0 +1,25 @@
+{
+  "name": "Acemedia",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/tailwind.css -o ./public/css/styles.css --jit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdjannatulhasan/Acemedia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdjannatulhasan/Acemedia/issues"
+  },
+  "homepage": "https://github.com/mdjannatulhasan/Acemedia#readme",
+  "dependencies": {
+    "@tailwindcss/forms": "^0.3.3",
+    "tailwindcss": "^2.2.4"
+  },
+  "devDependencies": {},
+  "description": ""
+}

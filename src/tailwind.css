@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+header {
+    @apply relative;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Responsive menu classes */
+.show-on-small {
+    @apply block lg:hidden;
+}
+.hide-on-small {
+    @apply lg:block hidden;
+}
+.nav-hidden {
+    @apply hidden;
+}
+
+#cross {
+    position: absolute;
+    right: 7%;
+    top: 7%;
+}
+#nav-menu-mobile {
+    @apply absolute top-5 right-0 w-full text-center bg-white text-[#1b153f] p-3 z-50;
+}
+
+.active-menu {
+    @apply block;
+}
+#menu-btn {
+    @apply border border-[#fe4a51] py-2 px-10 rounded-2xl mb-7;
+}
+ul.nav li a{
+    @apply hover:text-primary;
+}
+.nav .active-li{
+    @apply font-semibold text-primary;
+}
+
+/* Primary button */
+.btn-primary{
+    @apply border-2 border-primary bg-primary hover:bg-transparent py-3 px-7 rounded-lg text-white hover:text-black font-semibold;
+}
+
+/* Initialize all p */
+p{
+    @apply text-lg;
+}
+.title{
+    @apply text-heading text-4xl font-semibold leading-normal;
+}
+.content-title{
+    @apply text-2xl text-heading font-bold ;
+}
+.content-body{
+    @apply lg:w-9/12;
+}
+.tab-buttons .content-title{
+    @apply border-l-8 border-[#DEDEDE] pl-7 py-5; 
+}
+.tab-buttons .content-title.active-title{
+    @apply border-primary;
+}
+.splide__slide{
+    @apply space-y-7 py-5;
+}
+.splide__arrows{
+    @apply flex justify-end absolute -bottom-10 right-0; 
+}
+.splide__arrow{
+    border: 1px solid #ee5963 !important;
+    @apply relative float-right mx-5 bg-transparent hover:bg-primary;
+} 
+.splide__arrow svg{
+    fill: #ee5963;
+}.splide__arrow:hover svg{
+    fill: #FFFFFF;
+}
+.splide__pagination{
+    @apply hidden;
+}
+/* .d-hide{
+display: none;
+} */
+.active-content{
+    display: block;
+}
