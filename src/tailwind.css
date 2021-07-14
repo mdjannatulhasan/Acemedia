@@ -60,32 +60,15 @@ p{
     @apply lg:w-9/12;
 }
 .tab-buttons .content-title{
-    @apply border-l-8 border-[#DEDEDE] pl-7 py-5; 
+    @apply border-l-8 border-[#DEDEDE] pl-7 py-5 transition-all duration-300; 
 }
 .tab-buttons .content-title.active-title{
-    @apply border-primary;
+    @apply border-primary transition-all duration-300;
 }
-.splide__slide{
-    @apply space-y-7 py-5;
-}
-.splide__arrows{
-    @apply flex justify-end absolute -bottom-10 right-0; 
-}
-.splide__arrow{
-    border: 1px solid #ee5963 !important;
-    @apply relative float-right mx-5 bg-transparent hover:bg-primary;
-} 
-.splide__arrow svg{
-    fill: #ee5963;
-}.splide__arrow:hover svg{
-    fill: #FFFFFF;
-}
-.splide__pagination{
-    @apply hidden;
-}
-/* .d-hide{
-display: none;
-} */
+
 .active-content{
     display: block;
+}
+.tab-buttons{
+    @apply sticky top-0;
 }
