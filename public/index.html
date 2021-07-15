@@ -22,9 +22,9 @@
                     <ul class="nav flex md:flex-row md:space-x-10 md:space-y-0 text-xl flex-col sm:space-y-10 items-center justify-center">
                         <li class="active-li"><a href="index.html">Hjem</li></a>
                         <li><a href="">Tjenester</li></a>
-                        <li><a href="">Om oss</li></a>
+                        <li><a href="omoss.html">Om oss</li></a>
                         <li><a href="">Blogg</li></a>
-                        <li><a href="">Kontakt oss</li></a>
+                        <li><a href="kontakt.html">Kontakt oss</li></a>
                     </ul>
                 </div>
                 <div class="hide-on-small">
@@ -62,7 +62,7 @@
     <!-- Hero Section -->
     <section class="hero bg-hero-bg bg-cover">
         <div class="container lg:py-56 py-36 lg:space-y-10 space-y-5">
-            <div class="mx-auto text-3xl md:text-5xl lg:text-[64px] font-semibold text-white lg:w-11/12 text-center leading-snug">
+            <div class="mx-auto text-3xl md:text-5xl lg:text-[64px] font-semibold text-white tracking-tighter text-center leading-snug">
                 <h1>Markedsføring som <span class="text-primary"> knytter virksomheter </span> opp mot målgruppen sin</h1>
             </div>
             <div class="mx-auto lg:w-6/12 text-center">
@@ -78,22 +78,22 @@
     
     <section class="ta-kontakt">
         <div class="container lg:py-36">
-            <div class="title lg:w-8/12 mx-auto text-center">
+            <div class="title lg:w-10/12 mx-auto text-center">
                 <h2>Vi er et globalt kreativt og mediebyrå som fungerer annerledes fordi
                     vi er bygd annerledes.
                 </h2>
             </div>
-            <div class="btn text-center pt-5">
+            <div class="btn text-center pt-16">
                 <a class="btn-primary">Ta kontakt</a>
             </div>
         </div>
     </section>
     
-    <section class="slider pb-40">
+    <section class="slider mb-40">
         <div class="container">
             <div class="grid grid-cols-12">
                 <div class="lg:col-span-3 col-span-12">
-                    <ul class="tab-buttons  lg:pt-32">
+                    <ul class="tab-buttons hidden lg:block lg:pt-32">
                         <li class="content-title active-title" id="Storytelling-btn">Storytelling</li>
                         <li class="content-title" id="Branding-btn">Branding</li>
                         <li class="content-title" id="Design-btn">Design</li>
@@ -101,8 +101,8 @@
                         <li class="content-title" id="Marketing-btn">Marketing</li>
                     </ul>
                 </div>
-                <div class="lg:col-span-9 col-span-12  lg:pt-32">
-                    <div class="lg:pt-40 lg:pb-48 sec-content" id="Storytelling">
+                <div class="lg:col-span-9 col-span-12  lg:pt-32 space-y-20">
+                    <div class="sec-content" id="Storytelling">
                         <div class=" lg:hidden">
                             <img src="images/idea.svg" alt="">
                         </div>
@@ -113,7 +113,7 @@
                             <p class="text-[#697883]">Oppmuntrer den aktive fantasien til leseren. Her kan du lese mer om noen av de siste sakene vi har skrevet om, hvis du ønsker at vi skal skrive om et spesielt tema, så send oss gjerne en mail eller ring oss.</p>
                         </div>
                     </div>
-                    <div class="lg:pt-40 lg:pb-48 sec-content" id="Branding">
+                    <div class="sec-content" id="Branding">
                         <div class=" lg:hidden">
                             <img src="images/idea.svg" alt="">
                         </div>
@@ -124,7 +124,7 @@
                             <p class="text-[#697883]">Oppmuntrer den aktive fantasien til leseren. Her kan du lese mer om noen av de siste sakene vi har skrevet om, hvis du ønsker at vi skal skrive om et spesielt tema, så send oss gjerne en mail eller ring oss.</p>
                         </div>
                     </div>
-                    <div class="lg:pt-40 lg:pb-48 sec-content" id="Design">
+                    <div class="sec-content" id="Design">
                         <div class=" lg:hidden">
                             <img src="images/idea.svg" alt="">
                         </div>
@@ -135,7 +135,7 @@
                             <p class="text-[#697883]">Oppmuntrer den aktive fantasien til leseren. Her kan du lese mer om noen av de siste sakene vi har skrevet om, hvis du ønsker at vi skal skrive om et spesielt tema, så send oss gjerne en mail eller ring oss.</p>
                         </div>
                     </div>
-                    <div class="lg:pt-40 lg:pb-48 sec-content" id="Consulting">
+                    <div class="sec-content" id="Consulting">
                         <div class=" lg:hidden">
                             <img src="images/idea.svg" alt="">
                         </div>
@@ -146,7 +146,7 @@
                             <p class="text-[#697883]">Oppmuntrer den aktive fantasien til leseren. Her kan du lese mer om noen av de siste sakene vi har skrevet om, hvis du ønsker at vi skal skrive om et spesielt tema, så send oss gjerne en mail eller ring oss.</p>
                         </div>
                     </div>
-                    <div class="lg:pt-40 lg:pb-48 sec-content" id="Marketing">
+                    <div class="sec-content" id="Marketing">
                         <div class=" lg:hidden">
                             <img src="images/idea.svg" alt="">
                         </div>
@@ -162,9 +162,168 @@
         </div>
     </section>
     
+    <section class="consulting py-28">
+        <div class="container">
+            <div class="grid grid-cols-2">
+                <div class="space-y-9">
+                    <div class="tiny-header">
+                        Hvorfor Ace Consulting?
+                    </div>
+                    <div class="title">
+                        Vi har alltid 100% fornøydhetsgaranti. Med våre tjenester vil du alltid få
+                    </div>
+                    <ul>
+                        <li><img src="images/teenyicons_tick-circle-solid.svg" class="mr-5" alt="tick-mark"> Annonser som gir avkastning.</li>
+                        <li><img src="images/teenyicons_tick-circle-solid.svg" class="mr-5" alt="tick-mark"> Et design som får konkurrenter til å snakke om deg.</li>
+                        <li><img src="images/teenyicons_tick-circle-solid.svg" class="mr-5" alt="tick-mark"> Et Ace team som garanterer deg synlighet på nett.</li>
+                        <li><img src="images/teenyicons_tick-circle-solid.svg" class="mr-5" alt="tick-mark"> Strategier brukt av de største bedriftene.</li>
+                    </ul>
+                    <div class="pt-4">
+                        <a href="" class="btn-primary">Book møte</a>
+                    </div>
+                </div>
+                <div> <img src="images/consultiong pic.png" alt=""> </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-28">
+        <div class="container">
+            <div class="title mx-auto text-center">
+                <h2>
+                    Siste nytt
+                </h2>
+            </div>
+            <p class="lg:w-8/12 mx-auto text-center pt-10 pb-14">
+                Her kan du lese mer om noen av de siste sakene vi har skrevet om, hvis du ønsker at vi skal skrive om et spesielt tema, så send oss gjerne en mail eller ring oss.
+            </p>
+            <div class="custom-posts grid grid-cols-3 gap-8">
+                <div class="single">
+                    <img src="images/post-1.png" alt="">
+                    <div class="post-body">
+                        <h4>Overgå konkurrentene dine ved å følge disse stegene</h4>
+                        <p>Om du tenker deg om så kan du fort være enig i at den eneste konstanten på denne jord, er at ting alltid vil forandres. Det betyr at om...</p>
+                        <div class=" text-center">
+                            <a href="" class="btn-primary">Les mer</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="single">
+                    <img src="images/post-2.png" alt="">
+                    <div class="post-body">
+                        <h4>Overgå konkurrentene dine ved å følge disse stegene</h4>
+                        <p>Om du tenker deg om så kan du fort være enig i at den eneste konstanten på denne jord, er at ting alltid vil forandres. Det betyr at om...</p>
+                        <div class=" text-center">
+                            <a href="" class="btn-primary">Les mer</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="single">
+                    <img src="images/post-3.png" alt="">
+                    <div class="post-body">
+                        <h4>Overgå konkurrentene dine ved å følge disse stegene</h4>
+                        <p>Om du tenker deg om så kan du fort være enig i at den eneste konstanten på denne jord, er at ting alltid vil forandres. Det betyr at om...</p>
+                        <div class=" text-center">
+                            <a href="" class="btn-primary">Les mer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="booking py-28">
+        <div class="container">
+            <div class="grid grid-cols-2 lg:gap-x-12 gap-y-12">
+                <div class="single-book-col">
+                    <img src="images/book-1.png" alt="">
+                    <div class="book-col-body">
+                        <div class="space-y-4">
+                            <h4>Uforpliktende møte</h4>
+                            <p>30min</p>
+                            <hr>
+                        </div>
+                        <a href="">Book nå</a>
+                    </div>
+                </div>
+                <div class="single-book-col">
+                    <img src="images/book-1.png" alt="">
+                    <div class="book-col-body">
+                        <div class="space-y-4">
+                            <h4>Utdanningsportal</h4>
+                            <p>30min</p>
+                            <hr>
+                        </div>
+                        <a href="">Book nå</a>
+                    </div>
+                </div>
+                <div class="single-book-col">
+                    <img src="images/book-1.png" alt="">
+                    <div class="book-col-body">
+                        <div class="space-y-4">
+                            <h4>4 ukers kurs i markedsføring</h4>
+                            <p>30min</p>
+                            <hr>
+                        </div>
+                        <a href="">Book nå</a>
+                    </div>
+                </div>
+                <div class="single-book-col">
+                    <img src="images/book-1.png" alt="">
+                    <div class="book-col-body">
+                        <div class="space-y-4">
+                            <h4>Facebook ads</h4>
+                            <p>30min</p>
+                            <hr>
+                        </div>
+                        <a href="">Book nå</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="consulting py-28">
+        <div class="container">
+            <div class="grid grid-cols-2 gap-16">
+                <div class="space-y-9">
+                    <div class="title">
+                        Kontakt oss
+                    </div>
+                    <p>Kontakt oss gjennom dette skjema om du hr noen spørsmål eller ønsker bestilling til firma, vi hjelper dere så godt vi kan.</p>
+                    <form action="" class="space-y-5">
+                        <div class="grid grid-cols-2 gap-x-5">
+                            <input type="text" class="form-input border-[#dadada] px-4 py-3 rounded-lg" placeholder="NAVN">
+                            <input type="email" class="form-input border-[#dadada] px-4 py-3 rounded-lg" placeholder="EPOST">
+                        </div>
+                        <textarea class="form-input border-[#dadada] px-4 py-3 rounded-lg w-full" placeholder="Beskjed" name="" id="" rows="5"></textarea>
+                        <div class="pt-4">
+                            <a href="" class="btn-primary">Send</a>
+                        </div>
+                    </form>
+                </div>
+                <div> <img src="images/consultiong pic.png" alt=""> </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-[#001011] space-y-6 py-20">
+        <div class="container space-y-7">
+            <div class="opacity-40 text-white text-center">
+                <a href="">Kontakt</a>
+            </div>
+            <div class="social-icons text-white text-center space-x-5">
+                <a href=""class="hover:text-primary"><i class="fab fa-linkedin-in"></i></a>
+                <a href=""class="hover:text-primary"><i class="fab fa-facebook-f"></i></a>
+                <a href=""class="hover:text-primary"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="opacity-70 text-white">
+                <span>©2021 Ace Media Consulting.</span> <span class="float-right">Utviklet av <a class=" underline hover:text-primary" href="https://netmark.no/">NETMARK®</a></span>
+            </div>
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-    
     <script src="js/main.js"></script>
 </body>
 

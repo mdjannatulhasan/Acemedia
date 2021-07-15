@@ -29,8 +29,8 @@ $(document).ready(function () {
     const secOne = document.querySelectorAll(".slider .sec-content");
     const options = {
         root:null,
-        threshold:0,
-        rootMargin: "-280px 0px -500px 0px",
+        threshold:1,
+        rootMargin: "-90px 0px 0px 0px",
     };
     const observer = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {

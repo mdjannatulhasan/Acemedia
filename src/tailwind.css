@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: #F5F8FA;
+}
 header {
     @apply relative;
-    font-family: 'Montserrat', sans-serif;
 }
 
 /* Responsive menu classes */
@@ -51,7 +53,7 @@ p{
     @apply text-lg;
 }
 .title{
-    @apply text-heading text-4xl font-semibold leading-normal;
+    @apply text-heading text-4xl font-bold leading-normal;
 }
 .content-title{
     @apply text-2xl text-heading font-bold ;
@@ -63,12 +65,57 @@ p{
     @apply border-l-8 border-[#DEDEDE] pl-7 py-5 transition-all duration-300; 
 }
 .tab-buttons .content-title.active-title{
-    @apply border-primary transition-all duration-300;
+    @apply text-primary border-primary transition-all duration-300;
 }
 
 .active-content{
     display: block;
 }
+
 .tab-buttons{
     @apply sticky top-0;
+}
+
+.sec-content p{
+    @apply lg:text-2xl font-semibold lg:pt-36 lg:pb-36 px-5; 
+}
+
+/* Consulting section */
+.tiny-header{
+    @apply text-primary text-base font-semibold;
+}
+.consulting ul li{
+    @apply flex;
+}
+
+/* Post Preview Section */
+
+.single{
+    box-shadow: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.05));
+    @apply after:block after:top-0 after:bottom-0 after:left-0 after:right-0;
+}
+.single h4{
+    @apply font-bold text-xl;
+}
+.post-body{
+    @apply p-5 space-y-8;
+}
+
+/* Booking Sec */
+hr{
+    @apply border-primary opacity-30;
+}
+.single-book-col{
+    -webkit-filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, 0.1));
+    @apply grid grid-cols-2 bg-white;
+}
+.book-col-body{
+    @apply px-10 flex flex-col justify-center space-y-10;
+}
+.book-col-body a{
+    @apply text-primary font-semibold text-2xl;
+}
+.book-col-body h4{
+    @apply text-xl font-bold text-heading;
 }

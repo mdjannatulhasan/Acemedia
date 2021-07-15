@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acemedia</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <script src="https://kit.fontawesome.com/74ffea834f.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="py-9 lg:py-5">
+        <div class="container ">
+            <div class="flex justify-between items-center lg:flex-row lg:space-y-0 space-y-8 ">
+                <img src="images/logo.svg" alt="">
+                <div class="hide-on-small">
+                    <ul class="nav flex md:flex-row md:space-x-10 md:space-y-0 text-xl flex-col sm:space-y-10 items-center justify-center">
+                        <li class="active-li"><a href="index.html">Hjem</li></a>
+                        <li><a href="">Tjenester</li></a>
+                        <li><a href="omoss.html">Om oss</li></a>
+                        <li><a href="">Blogg</li></a>
+                        <li><a href="kontakt.html">Kontakt oss</li></a>
+                    </ul>
+                </div>
+                <div class="hide-on-small">
+                    <div>
+                        <button class="btn-primary">Beregn Pris</button>
+                    </div>
+                </div>
+                <button type="button" class="focus:outline-none show-on-small" id="toggler-icon" style="height:30px">
+                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" style="color: black; width:30px;;">
+                        <path fill-rule="evenodd"
+                        d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+                    </svg>
+                </button>
+                <div class="nav-hidden" id="nav-menu-mobile">
+                    <div class="mobile-menu">
+                        <button id="cross">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <ul class="nav flex text-xl flex-col sm:space-y-10 items-center justify-center">
+                            <li class="active-li"><a href="index.html">Hjem</li></a>
+                            <li><a href="">Tjenester</li></a>
+                            <li><a href="">Om oss</li></a>
+                            <li><a href="">Blogg</li></a>
+                            <li><a href="">Kontakt oss</li></a>
+                        </ul>
+                        <div class="">
+                            <button class="btn-primary">Beregn Pris</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="py-36">
+        <div class="container">
+            <div class="title text-center pb-16">Ta kontakt med oss!</div>
+            <div class="grid lg:grid-cols-3 gap-16">
+                <div class="space-y-4">
+                    <img class="mx-auto" src="images/Group 19411.svg" alt="">
+                    <h5 class="text-center font-bold text-heading text-2xl">Besøk oss</h5>
+                    <p class="w-8/12 mx-auto text-center">2383  Rockford Mountain Lane, Raleigh, NC</p>
+                </div>
+                <div class="space-y-4">
+                    <img class="mx-auto" src="images/Group 19411.svg" alt="">
+                    <h5 class="text-center font-bold text-heading text-2xl">Besøk oss</h5>
+                    <p class="w-8/12 mx-auto text-center">2383  Rockford Mountain Lane, Raleigh, NC</p>
+                </div>
+                <div class="space-y-4">
+                    <img class="mx-auto" src="images/Group 19411.svg" alt="">
+                    <h5 class="text-center font-bold text-heading text-2xl">Besøk oss</h5>
+                    <p class="w-8/12 mx-auto text-center">2383  Rockford Mountain Lane, Raleigh, NC</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="consulting py-28">
+        <div class="container">
+            <div class="grid grid-cols-2 gap-16">
+                <div class="space-y-9">
+                    <div class="title">
+                        Send oss ​​en melding
+                    </div>
+                    <form action="" class="space-y-5">
+                        <div class="grid grid-cols-2 gap-x-5">
+                            <input type="text" class="form-input border-[#dadada] px-4 py-3 rounded-lg" placeholder="NAVN">
+                            <input type="email" class="form-input border-[#dadada] px-4 py-3 rounded-lg" placeholder="EPOST">
+                        </div>
+                        <textarea class="form-input border-[#dadada] px-4 py-3 rounded-lg w-full" placeholder="Beskjed" name="" id="" rows="5"></textarea>
+                        <div class="pt-4">
+                            <a href="" class="btn-primary">Send</a>
+                        </div>
+                    </form>
+                </div>
+                <div> <img src="images/om-kon.png" alt=""> </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-[#001011] space-y-6 py-20">
+        <div class="container space-y-7">
+            <div class="opacity-40 text-white text-center">
+                <a href="">Kontakt</a>
+            </div>
+            <div class="social-icons text-white text-center space-x-5">
+                <a href=""class="hover:text-primary"><i class="fab fa-linkedin-in"></i></a>
+                <a href=""class="hover:text-primary"><i class="fab fa-facebook-f"></i></a>
+                <a href=""class="hover:text-primary"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="opacity-70 text-white">
+                <span>©2021 Ace Media Consulting.</span> <span class="float-right">Utviklet av <a class=" underline hover:text-primary" href="https://netmark.no/">NETMARK®</a></span>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
