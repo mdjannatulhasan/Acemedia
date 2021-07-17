@@ -7,8 +7,10 @@
     <title>Acemedia</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <script src="https://kit.fontawesome.com/74ffea834f.js" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="css/styles.css">
@@ -77,15 +79,15 @@
     <section class="hero bg-hero-bg bg-cover">
         <div class="container lg:py-56 py-36 lg:space-y-10 space-y-5">
             <div class="mx-auto text-3xl md:text-5xl lg:text-[64px] font-semibold text-white tracking-tighter text-center leading-snug">
-                <h1>Markedsføring som <span class="text-primary"> knytter virksomheter </span> opp mot målgruppen sin</h1>
+                <h1 class="animate__animated animate__zoomIn animate__slow">Markedsføring som <span class="text-primary"> knytter virksomheter </span> opp mot målgruppen sin</h1>
             </div>
             <div class="mx-auto lg:w-6/12 text-center">
-                <p class="text-white">
+                <p class="text-white animate__animated animate__zoomIn animate__slow animate__delay-1s">
                     Frustrerende med annonsering som tar energi og budsjettet ditt uten å gi deg den avkastningen du forventer? 
                 </p>
             </div>
-            <div class="btn text-center pt-5">
-                <a class="btn-primary">Uforpliktende analysemøte</a>
+            <div class="btn text-center pt-5 animate__animated animate__fadeInUp animate__fast animate__delay-2s">
+                <a class="btn-primary hover:text-white">Uforpliktende analysemøte</a>
             </div>
         </div>
     </section>
@@ -93,7 +95,7 @@
     <section class="ta-kontakt">
         <div class="container lg:py-36 py-20">
             <div class="title lg:w-10/12 mx-auto text-center">
-                <h2>Vi er et globalt kreativt og mediebyrå som fungerer annerledes fordi
+                <h2 class="">Vi er et globalt kreativt og mediebyrå som fungerer annerledes fordi
                     vi er bygd annerledes.
                 </h2>
             </div>
@@ -115,7 +117,7 @@
                         <li class="content-title" id="Marketing-btn">Marketing</li>
                     </ul>
                 </div>
-                <div class="lg:col-span-9 col-span-12  lg:pt-32 space-y-20">
+                <div class="lg:col-span-9 col-span-12 lg:pt-32 space-y-20">
                     <div class="sec-content" id="Storytelling">
                         <div class=" lg:hidden">
                             <img src="images/idea.svg" alt="">
@@ -179,7 +181,7 @@
     <section class="consulting py-28">
         <div class="container">
             <div class="grid lg:grid-cols-2">
-                <div class="space-y-9">
+                <div class="space-y-9 leftCol">
                     <div class="tiny-header">
                         Hvorfor Ace Consulting?
                     </div>
@@ -196,23 +198,23 @@
                         <a href="" class="btn-primary">Book møte</a>
                     </div>
                 </div>
-                <div> <img src="images/consultiong pic.png" alt=""> </div>
+                <div class="rightCol"> <img src="images/consultiong pic.png" alt=""> </div>
             </div>
         </div>
     </section>
     
-    <section class="py-28">
+    <section class="py-28 blogg">
         <div class="container">
             <div class="title mx-auto text-center">
                 <h2>
                     Siste nytt
                 </h2>
             </div>
-            <p class="lg:w-8/12 mx-auto text-center pt-10 pb-14">
+            <p class="lg:w-8/12 mx-auto text-center pt-10 pb-14 sec-p">
                 Her kan du lese mer om noen av de siste sakene vi har skrevet om, hvis du ønsker at vi skal skrive om et spesielt tema, så send oss gjerne en mail eller ring oss.
             </p>
             <div class="custom-posts grid lg:grid-cols-3 gap-8">
-                <div class="single">
+                <div class="single s-1">
                     <img src="images/post-1.png" alt="">
                     <div class="post-body">
                         <h4>Overgå konkurrentene dine ved å følge disse stegene</h4>
@@ -222,7 +224,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="single">
+                <div class="single s-2">
                     <img src="images/post-2.png" alt="">
                     <div class="post-body">
                         <h4>Overgå konkurrentene dine ved å følge disse stegene</h4>
@@ -232,7 +234,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="single">
+                <div class="single s-3">
                     <img src="images/post-3.png" alt="">
                     <div class="post-body">
                         <h4>Overgå konkurrentene dine ved å følge disse stegene</h4>
@@ -249,7 +251,7 @@
     <section class="booking py-28">
         <div class="container">
             <div class="grid lg:grid-cols-2 lg:gap-x-12 gap-y-12">
-                <div class="single-book-col">
+                <div class="single-book-col b1">
                     <img src="images/book-1.png" alt="">
                     <div class="book-col-body">
                         <div class="space-y-4">
@@ -260,7 +262,7 @@
                         <a href="">Book nå</a>
                     </div>
                 </div>
-                <div class="single-book-col">
+                <div class="single-book-col b2">
                     <img src="images/book-2.png" alt="">
                     <div class="book-col-body">
                         <div class="space-y-4">
@@ -271,7 +273,7 @@
                         <a href="">Book nå</a>
                     </div>
                 </div>
-                <div class="single-book-col">
+                <div class="single-book-col b3">
                     <img src="images/book-3.png" alt="">
                     <div class="book-col-body">
                         <div class="space-y-4">
@@ -282,7 +284,7 @@
                         <a href="">Book nå</a>
                     </div>
                 </div>
-                <div class="single-book-col">
+                <div class="single-book-col b4">
                     <img src="images/book-4.png" alt="">
                     <div class="book-col-body">
                         <div class="space-y-4">
@@ -297,10 +299,10 @@
         </div>
     </section>
     
-    <section class="consulting py-28">
+    <section class="form py-28">
         <div class="container">
             <div class="grid lg:grid-cols-2 gap-16">
-                <div class="space-y-9">
+                <div class="space-y-9 leftCol">
                     <div class="title">
                         Kontakt oss
                     </div>
@@ -316,7 +318,7 @@
                         </div>
                     </form>
                 </div>
-                <div> <img src="images/consultiong pic.png" alt=""> </div>
+                <div class="rightCol"> <img src="images/consultiong pic.png" alt=""> </div>
             </div>
         </div>
     </section>
@@ -337,7 +339,7 @@
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js" integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/main.js"></script>
 </body>
 

@@ -154,7 +154,7 @@ ul.nav li{
     @apply text-3xl font-bold mb-5;
 }
 .service-contents > * {
-  @apply mb-4;
+    @apply mb-4;
 }
 .service-contents ul {
     @apply list-disc ml-10;
@@ -180,4 +180,45 @@ ul.nav li{
 }
 .post-title h2{
     @apply text-xl lg:text-2xl leading-normal text-heading font-bold;
+}
+
+
+/* Hjem Page Animations */
+
+:root {
+    --animate-delay: 0.7s;
+    --animate-duration: .7s;
+}
+.ta-kontakt h2,.ta-kontakt .btn,
+.slider .tab-buttons,
+.slider .sec-content,
+.consulting .leftCol,
+.consulting .rightCol,
+.blogg h2,.blogg .sec-p,
+.blogg .s-1,
+.blogg .s-2,
+.blogg .s-3,.b1,.b2,.b3,.b4,
+.form .leftCol,
+.form .rightCol
+{
+    opacity: 0;
+}
+.ta-kontakt h2.animate__animated,.ta-kontakt .btn.animate__animated,
+.slider .tab-buttons.animate__animated,
+.slider .sec-content.animate__animated,
+.consulting .leftCol.animate__animated,
+.consulting .rightCol.animate__animated,
+.blogg h2.animate__animated,
+.blogg .sec-p.animate__animated,
+.blogg .s-1.animate__animated,
+.blogg .s-2.animate__animated,
+.blogg .s-3.animate__animated,
+.b1.animate__animated,
+.b2.animate__animated,
+.b3.animate__animated,
+.b4.animate__animated,
+.form .leftCol.animate__animated,
+.form .rightCol.animate__animated
+{
+    opacity: 1;
 }
