@@ -115,7 +115,7 @@ hr{
 .single-book-col{
     -webkit-filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, 0.1));
     filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, 0.1));
-    @apply grid grid-cols-2 bg-white;
+    @apply grid lg:grid-cols-2 gap-y-5 bg-white;
 }
 .book-col-body{
     @apply px-10 flex flex-col justify-center space-y-10;
