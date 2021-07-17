@@ -1480,9 +1480,15 @@ hr {
 .single-book-col{
   filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, 0.1));
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  row-gap: 1.25rem;
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
+
+@media (min-width: 1024px) {
+  .single-book-col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .book-col-body {
