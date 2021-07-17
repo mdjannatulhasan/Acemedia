@@ -72,12 +72,12 @@ $(document).ready(function () {
     $(".consulting .leftCol").waypoint(function(direction){
         $(".consulting .leftCol").addClass('animate__animated animate__fadeInLeft animate__slow')
     },{
-        offset:'40%'
+        offset:'30%'
     });
     $(".consulting .rightCol").waypoint(function(direction){
         $(".consulting .rightCol").addClass('animate__animated animate__fadeInRight animate__slow')
     },{
-        offset:'40%'
+        offset:'30%'
     });
     $(".blogg").waypoint(function(direction){
         $(".blogg h2").addClass('animate__animated animate__zoomIn animate__slow')
