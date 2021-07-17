@@ -120,7 +120,7 @@ hr{
     @apply grid lg:grid-cols-2 gap-y-5 bg-white;
 }
 .book-col-body{
-    @apply px-10 flex flex-col justify-center space-y-10;
+    @apply px-10 flex flex-col justify-center space-y-10 pb-12 lg:pb-0;
 }
 .book-col-body a{
     @apply text-primary font-semibold text-2xl;

@@ -933,6 +933,10 @@ select {
   gap: 5rem;
 }
 
+.gap-y-10 {
+  row-gap: 2.5rem;
+}
+
 .gap-y-12 {
   row-gap: 3rem;
 }
@@ -1517,6 +1521,13 @@ hr {
 .book-col-body {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .book-col-body {
+    padding-bottom: 0px;
+  }
 }
 
 .book-col-body a {
@@ -1871,6 +1882,10 @@ ul.nav li {
 
   .lg\:flex-row {
     flex-direction: row;
+  }
+
+  .lg\:gap-y-0 {
+    row-gap: 0px;
   }
 
   .lg\:gap-x-12 {

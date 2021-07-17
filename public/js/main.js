@@ -52,22 +52,22 @@ $(document).ready(function () {
     $(".ta-kontakt").waypoint(function(direction){
         $(".ta-kontakt h2").addClass('animate__animated animate__zoomIn animate__slow')
     },{
-        offset:'40%'
+        offset:'50%'
     });
     $(".ta-kontakt").waypoint(function(direction){
         $(".ta-kontakt .btn").addClass('animate__animated animate__zoomIn animate__slow')
     },{
-        offset:'40%'
+        offset:'50%'
     });
     $(".slider").waypoint(function(direction){
         $(".slider .tab-buttons").addClass('animate__animated animate__fadeInLeft animate__slow')
     },{
-        offset:'40%'
+        offset:'50%'
     });
     $(".slider").waypoint(function(direction){
         $(".slider .sec-content").addClass('animate__animated animate__fadeInRight animate__slow')
     },{
-        offset:'40%'
+        offset:'50%'
     });
     $(".consulting .leftCol").waypoint(function(direction){
         $(".consulting .leftCol").addClass('animate__animated animate__fadeInLeft animate__slow')
@@ -82,56 +82,56 @@ $(document).ready(function () {
     $(".blogg").waypoint(function(direction){
         $(".blogg h2").addClass('animate__animated animate__zoomIn animate__slow')
     },{
-        offset:'40%'
+        offset:'50%'
     });
     $(".blogg").waypoint(function(direction){
         $(".blogg .sec-p").addClass('animate__animated animate__zoomIn animate__slow')
     },{
-        offset:'40%'
+        offset:'50%'
     });
     $(".blogg .s-1").waypoint(function(direction){
         $(".blogg .s-1").addClass('animate__animated animate__fadeInLeft animate__slow')
     },{
-        offset:'20%'
+        offset:'60%'
     });
     $(".blogg .s-2").waypoint(function(direction){
         $(".blogg .s-2").addClass('animate__animated animate__fadeInUp animate__slow')
     },{
-        offset:'20%'
+        offset:'60%'
     });
     $(".blogg .s-3").waypoint(function(direction){
         $(".blogg .s-3").addClass('animate__animated animate__fadeInRight animate__slow')
     },{
-        offset:'20%'
+        offset:'60%'
     });
     $(".booking .b1").waypoint(function(direction){
         $(".booking .b1").addClass('animate__animated animate__fadeInTopLeft animate__slow')
     },{
-        offset:'40%'
+        offset:'70%'
     });
     $(".booking .b3").waypoint(function(direction){
         $(".booking .b3").addClass('animate__animated animate__fadeInBottomLeft animate__slow')
     },{
-        offset:'40%'
+        offset:'70%'
     });
     $(".booking .b2").waypoint(function(direction){
         $(".booking .b2").addClass('animate__animated animate__fadeInTopRight animate__slow')
     },{
-        offset:'40%'
+        offset:'70%'
     });
     $(".booking .b4").waypoint(function(direction){
         $(".booking .b4").addClass('animate__animated animate__fadeInBottomRight animate__slow')
     },{
-        offset:'40%'
+        offset:'70%'
     });
     $(".form .leftCol").waypoint(function(direction){
         $(".form .leftCol").addClass('animate__animated animate__fadeInLeft animate__slow')
     },{
-        offset:'40%'
+        offset:'50%'
     });
     $(".form .rightCol").waypoint(function(direction){
         $(".form .rightCol").addClass('animate__animated animate__fadeInRight animate__slow')
     },{
-        offset:'40%'
+        offset:'50%'
     });
 });
