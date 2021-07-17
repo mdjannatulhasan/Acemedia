@@ -60,7 +60,7 @@ p{
     @apply text-lg;
 }
 .title{
-    @apply text-heading text-4xl font-bold leading-normal;
+    @apply text-heading lg:text-4xl text-3xl font-bold leading-normal;
 }
 .content-title{
     @apply text-2xl text-heading font-bold ;
@@ -94,7 +94,9 @@ p{
 .consulting ul li{
     @apply flex;
 }
+.consulting .title{
 
+}
 /* Post Preview Section */
 
 .single{
