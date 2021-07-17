@@ -92,17 +92,17 @@ $(document).ready(function () {
     $(".blogg .s-1").waypoint(function(direction){
         $(".blogg .s-1").addClass('animate__animated animate__fadeInLeft animate__slow')
     },{
-        offset:'40%'
+        offset:'20%'
     });
     $(".blogg .s-2").waypoint(function(direction){
         $(".blogg .s-2").addClass('animate__animated animate__fadeInUp animate__slow')
     },{
-        offset:'40%'
+        offset:'20%'
     });
     $(".blogg .s-3").waypoint(function(direction){
         $(".blogg .s-3").addClass('animate__animated animate__fadeInRight animate__slow')
     },{
-        offset:'40%'
+        offset:'20%'
     });
     $(".booking .b1").waypoint(function(direction){
         $(".booking .b1").addClass('animate__animated animate__fadeInTopLeft animate__slow')
