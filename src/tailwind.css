@@ -126,3 +126,43 @@ hr{
 .book-col-body h4{
     @apply text-xl font-bold text-heading;
 }
+
+
+/* Tjenester Page */
+ul.nav li{
+    @apply relative;
+}
+.item-has-sub-menu li{
+    @apply p-4; 
+}
+.item-has-sub-menu li a{
+    color: white !important;
+}
+.item-has-sub-menu ul li:hover{
+    @apply bg-primary;
+}
+.item-has-sub-menu ul{
+    @apply mt-5 lg:mt-0 hidden lg:absolute lg:top-full text-heading lg:min-w-max w-full bg-[#ff9199] font-normal;
+}
+.item-has-sub-menu:hover ul{
+    @apply block;
+}
+.list-items li {flex-basis: 50%;}
+@media (max-width:1200px) { .list-items li { flex-basis: 100%;} } 
+
+.service-contents > h2 {
+    @apply text-3xl font-bold mb-5;
+}
+.service-contents > * {
+  @apply mb-4;
+}
+.service-contents ul {
+    @apply list-disc ml-10;
+}
+.list-items li:before {
+    content: url('https://ninabfitje.no/wp-content/themes/nina-b-fitje/includes/img/check.svg');
+    @apply relative top-[2px] mr-3;
+}
+.site-service .active-tjenester {
+    @apply bg-primary text-white;
+}
