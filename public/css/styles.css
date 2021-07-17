@@ -1619,7 +1619,6 @@ ul.nav li {
   grid-template-columns: repeat(1, minmax(0, 1fr));
   align-items: center;
   row-gap: 2.5rem;
-  padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
