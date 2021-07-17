@@ -845,10 +845,6 @@ select {
   margin-bottom: 0.75rem;
 }
 
-.mb-40 {
-  margin-bottom: 10rem;
-}
-
 .mr-5 {
   margin-right: 1.25rem;
 }
@@ -1100,6 +1096,11 @@ select {
 .py-36 {
   padding-top: 9rem;
   padding-bottom: 9rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .px-4 {
@@ -1814,6 +1815,10 @@ ul.nav li {
     margin-top: 0px;
   }
 
+  .lg\:mb-40 {
+    margin-bottom: 10rem;
+  }
+
   .lg\:block {
     display: block;
   }
@@ -1893,6 +1898,11 @@ ul.nav li {
   .lg\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+
+  .lg\:py-28 {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
   }
 
   .lg\:pt-32 {
