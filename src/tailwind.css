@@ -184,13 +184,16 @@ ul.nav li{
 .service-contents ul {
     @apply list-disc ml-10;
 }
-.list-items li:before {
-    content: url('https://ninabfitje.no/wp-content/themes/nina-b-fitje/includes/img/check.svg');
-    @apply relative top-[2px] mr-3;
-}
+
 .site-service .active-tjenester {
-    @apply bg-primary text-white;
+    @apply bg-heading text-white;
 }
+
+/* Om Oss page */
+.team img{
+    @apply rounded-full;
+}
+
 
 
 /* Archive Page */
