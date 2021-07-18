@@ -110,7 +110,7 @@ p{
 }
 
 .sec-content p{
-    @apply lg:text-2xl font-semibold lg:pt-36 lg:pb-36 px-5 text-gray-500 space-y-4 lg:space-y-0; 
+    @apply lg:text-2xl font-semibold lg:pt-36 lg:pb-36 lg:px-5 text-gray-500 space-y-4 lg:space-y-0; 
 }
 
 /* Consulting section */
@@ -254,3 +254,6 @@ ul.nav li{
 {
     opacity: 1;
 }
+
+
+/* Swiper Slider in HJEM Page */
