@@ -20,7 +20,7 @@ header {
 
 /* Button */
 .btn-secondary{
-    @apply bg-heading hover:bg-transparent border-heading hover:text-white transition-colors duration-300 border-2 py-3 px-7 rounded-lg;
+    @apply bg-heading hover:bg-transparent border-heading text-white hover:text-heading transition-colors duration-300 border-2 py-3 px-7 rounded-lg;
 }
 
 /* Responsive menu classes */
