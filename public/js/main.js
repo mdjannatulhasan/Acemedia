@@ -145,10 +145,10 @@ $(document).ready(function () {
           el: ".swiper-pagination",
         },
       });
-      var swiper2 = new Swiper(".mySwiper2", {
-        spaceBetween: 30,
-        pagination: {
-          el: ".swiper-pagination",
-        },
-      });
+    //   var swiper2 = new Swiper(".mySwiper2", {
+    //     spaceBetween: 30,
+    //     pagination: {
+    //       el: ".swiper-pagination",
+    //     },
+    //   });
 });

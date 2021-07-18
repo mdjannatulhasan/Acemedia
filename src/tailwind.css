@@ -16,7 +16,9 @@ body{
 header {
     @apply sticky top-0 bg-white z-40 ;
 }
-
+header img{
+    @apply h-[50px] lg:h-auto;
+}
 
 /* Button */
 .btn-secondary{
