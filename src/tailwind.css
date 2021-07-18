@@ -14,13 +14,16 @@ body{
     background: #F5F8FA;
 }
 header {
-    @apply relative;
+    @apply sticky top-0 bg-white z-40;
 }
 
 
 /* Button */
 .btn-secondary{
-    @apply hover:bg-heading bg-transparent border-heading hover:text-white transition-colors duration-300 border-2 py-3 px-7 rounded-lg;
+    @apply hover:bg-heading bg-white border-white hover:border-heading text-heading hover:text-white transition-colors duration-300 border-2 py-3 px-7 rounded-lg;
+}
+.form .btn-secondary , header .btn-secondary{
+    @apply border-heading;
 }
 .consulting .btn-secondary{
     @apply bg-heading hover:bg-transparent border-heading text-white hover:text-black transition-colors duration-300 border-2 py-3 px-7 rounded-lg;
@@ -86,7 +89,7 @@ p{
     @apply text-heading lg:text-4xl text-3xl font-bold leading-normal;
 }
 .content-title{
-    @apply text-2xl text-white font-bold ;
+    @apply text-2xl text-gray-500 font-bold ;
 }
 .content-body{
     @apply lg:w-9/12 text-justify;
@@ -263,6 +266,9 @@ ul.nav li{
     padding-bottom: 40px;
 }
 
+.swiper-slide .content-title{
+    @apply text-white ;
+}
 .swiper-slide {
     @apply text-center text-lg text-white items-center flex flex-col mx-auto justify-center space-y-7;
 }
