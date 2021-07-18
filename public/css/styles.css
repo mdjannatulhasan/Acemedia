@@ -1261,7 +1261,8 @@ header {
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgba(59, 65, 60, var(--tw-border-opacity));
-  background-color: transparent;
+  --tw-bg-opacity: 1;
+  background-color: rgba(59, 65, 60, var(--tw-bg-opacity));
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   padding-left: 1.75rem;
@@ -1273,8 +1274,7 @@ header {
 }
 
 .btn-secondary:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgba(59, 65, 60, var(--tw-bg-opacity));
+  background-color: transparent;
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
@@ -1426,7 +1426,14 @@ p {
   line-height: 2rem;
   font-weight: 700;
   --tw-text-opacity: 1;
-  color: rgba(107, 114, 128, var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .content-title {
+    --tw-text-opacity: 1;
+    color: rgba(107, 114, 128, var(--tw-text-opacity));
+  }
 }
 
 .content-body {

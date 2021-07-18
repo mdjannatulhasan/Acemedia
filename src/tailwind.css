@@ -20,7 +20,7 @@ header {
 
 /* Button */
 .btn-secondary{
-    @apply hover:bg-heading bg-transparent border-heading hover:text-white transition-colors duration-300 border-2 py-3 px-7 rounded-lg;
+    @apply bg-heading hover:bg-transparent border-heading hover:text-white transition-colors duration-300 border-2 py-3 px-7 rounded-lg;
 }
 
 /* Responsive menu classes */
@@ -84,7 +84,7 @@ p{
     @apply text-heading lg:text-4xl text-3xl font-bold leading-normal;
 }
 .content-title{
-    @apply text-2xl text-gray-500 font-bold ;
+    @apply text-2xl text-white lg:text-gray-500 font-bold ;
 }
 .content-body{
     @apply lg:w-9/12 text-justify;
