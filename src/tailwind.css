@@ -40,9 +40,11 @@ header {
     top: 7%;
 }
 #nav-menu-mobile {
-    @apply absolute top-5 right-0 w-full text-center bg-white text-[#1b153f] p-3 z-50;
+    @apply fixed mt-0 top-0 right-0 bottom-0 left-0 w-full text-center bg-black text-white p-3 z-50;
 }
-
+.mobile-menu, .mobile-menu ul{
+    @apply space-y-7;
+}
 .active-menu {
     @apply block;
 }
