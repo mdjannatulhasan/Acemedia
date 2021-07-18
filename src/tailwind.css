@@ -24,10 +24,8 @@ header img{
 .btn-secondary{
     @apply hover:bg-heading bg-white border-white hover:border-heading text-heading hover:text-white transition-colors duration-300 border-2 py-3 px-7 rounded-lg;
 }
-.form .btn-secondary , header .btn-secondary, .ta-kontakt .btn-secondary{
-    @apply border-heading;
-}
-.consulting .btn-secondary{
+
+.consulting .btn-secondary, header .btn-secondary, .ta-kontakt .btn-secondary,.form .btn-secondary{
     @apply bg-heading hover:bg-transparent border-heading text-white hover:text-black transition-colors duration-300 border-2 py-3 px-7 rounded-lg;
 }
 /* Responsive menu classes */

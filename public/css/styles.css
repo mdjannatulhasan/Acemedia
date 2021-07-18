@@ -1269,12 +1269,7 @@ header img {
   color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
-.form .btn-secondary, header .btn-secondary, .ta-kontakt .btn-secondary {
-  --tw-border-opacity: 1;
-  border-color: rgba(59, 65, 60, var(--tw-border-opacity));
-}
-
-.consulting .btn-secondary {
+.consulting .btn-secondary, header .btn-secondary, .ta-kontakt .btn-secondary, .form .btn-secondary {
   border-radius: 0.5rem;
   border-width: 2px;
   --tw-border-opacity: 1;
@@ -1293,7 +1288,7 @@ header img {
   transition-duration: 300ms;
 }
 
-.consulting .btn-secondary:hover {
+.consulting .btn-secondary:hover, header .btn-secondary:hover, .ta-kontakt .btn-secondary:hover, .form .btn-secondary:hover {
   background-color: transparent;
   --tw-text-opacity: 1;
   color: rgba(0, 0, 0, var(--tw-text-opacity));
