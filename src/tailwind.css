@@ -274,7 +274,7 @@ ul.nav li{
 .swiper-slide {
     @apply text-center text-lg text-white items-center flex flex-col mx-auto justify-center space-y-7;
 }
-.swiper-slide img{
+.slider .swiper-slide img{
     max-width: 150px;
 }
 .swiper-pagination-bullet {

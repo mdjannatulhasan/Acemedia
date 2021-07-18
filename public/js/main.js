@@ -145,4 +145,10 @@ $(document).ready(function () {
           el: ".swiper-pagination",
         },
       });
+      var swiper = new Swiper(".mySwiper2", {
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
 });

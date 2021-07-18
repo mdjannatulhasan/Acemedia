@@ -1887,7 +1887,7 @@ ul.nav li {
   color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
-.swiper-slide img{
+.slider .swiper-slide img{
   max-width: 150px;
 }
 
@@ -1994,6 +1994,10 @@ ul.nav li {
 
   .lg\:block {
     display: block;
+  }
+
+  .lg\:grid {
+    display: grid;
   }
 
   .lg\:hidden {
