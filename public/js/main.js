@@ -29,18 +29,19 @@ $(document).ready(function () {
     const secOne = document.querySelectorAll(".slider .sec-content");
     const options = {
         root:null,
-        threshold:1,
-        rootMargin: "-90px 0px 0px 0px",
+        threshold:.8,
+        rootMargin: "-60px 0px 0px 0px",
     };
     const observer = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {
-            console.log(entry);
             var tabId = entry.target.id + "-btn";
+            var par = "#"+entry.target.id + " p";
+            console.log(par);
             if(entry.isIntersecting){
-                entry.target.style.backgroundColor = 'lightBlue';
+                document.querySelector(par).style.color = 'white';
                 document.getElementById(tabId).classList.add('active-title');
             }else{
-                entry.target.style.backgroundColor = 'white';
+                document.querySelector(par).style.color = '#6B7280';
                 document.getElementById(tabId).classList.remove('active-title');
             }
         })
@@ -49,16 +50,16 @@ $(document).ready(function () {
     secOne.forEach(section => {
         observer.observe(section);
     });
-    $(".ta-kontakt").waypoint(function(direction){
-        $(".ta-kontakt h2").addClass('animate__animated animate__zoomIn animate__slow')
-    },{
-        offset:'50%'
-    });
-    $(".ta-kontakt").waypoint(function(direction){
-        $(".ta-kontakt .btn").addClass('animate__animated animate__zoomIn animate__slow')
-    },{
-        offset:'50%'
-    });
+    // $(".ta-kontakt").waypoint(function(direction){
+    //     $(".ta-kontakt h2").addClass('animate__animated animate__zoomIn animate__slow')
+    // },{
+    //     offset:'50%'
+    // });
+    // $(".ta-kontakt").waypoint(function(direction){
+    //     $(".ta-kontakt .btn").addClass('animate__animated animate__zoomIn animate__slow')
+    // },{
+    //     offset:'50%'
+    // });
     $(".slider").waypoint(function(direction){
         $(".slider .tab-buttons").addClass('animate__animated animate__fadeInLeft animate__slow')
     },{
@@ -72,12 +73,12 @@ $(document).ready(function () {
     $(".consulting .leftCol").waypoint(function(direction){
         $(".consulting .leftCol").addClass('animate__animated animate__fadeInLeft animate__slow')
     },{
-        offset:'30%'
+        offset:'50%'
     });
     $(".consulting .rightCol").waypoint(function(direction){
         $(".consulting .rightCol").addClass('animate__animated animate__fadeInRight animate__slow')
     },{
-        offset:'30%'
+        offset:'50%'
     });
     $(".blogg").waypoint(function(direction){
         $(".blogg h2").addClass('animate__animated animate__zoomIn animate__slow')

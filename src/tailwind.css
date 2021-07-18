@@ -17,6 +17,12 @@ header {
     @apply relative;
 }
 
+
+/* Button */
+.btn-secondary{
+    @apply hover:bg-heading bg-transparent border-heading hover:text-white transition-colors duration-300 border-2 py-3 px-7 rounded-lg;
+}
+
 /* Responsive menu classes */
 .show-on-small {
     @apply block lg:hidden;
@@ -43,18 +49,31 @@ header {
 #menu-btn {
     @apply border border-[#fe4a51] py-2 px-10 rounded-2xl mb-7;
 }
-ul.nav li a{
-    @apply hover:text-primary;
+
+ul.nav li::after{
+    display: block;
+    content: '';
+    width: 0%;
+    height: 3px;
+    margin-top: 5px;
+    margin-left: 1px;
+    background: #000;
+    transition: all 400ms ease;
+}
+ul.nav li:hover::after{
+    width: 70%;
+    transition: all 400ms ease;
 }
 .nav .active-li{
-    @apply font-semibold text-primary;
+    @apply font-semibold;
 }
-
+ul.nav li.active-li::after{
+    width: 70%;
+}
 /* Primary button */
 .btn-primary{
     @apply border-2 border-primary bg-primary hover:bg-transparent py-3 px-7 rounded-lg text-white hover:text-black font-semibold;
 }
-
 /* Initialize all p */
 p{
     @apply text-lg;
@@ -63,16 +82,19 @@ p{
     @apply text-heading lg:text-4xl text-3xl font-bold leading-normal;
 }
 .content-title{
-    @apply text-2xl text-heading font-bold ;
+    @apply text-2xl text-gray-500 font-bold ;
 }
 .content-body{
-    @apply lg:w-9/12;
+    @apply lg:w-9/12 text-justify;
+}
+.content-body p{
+    @apply text-justify;
 }
 .tab-buttons .content-title{
-    @apply border-l-8 border-[#DEDEDE] pl-7 py-5 transition-all duration-300; 
+    @apply border-l-8 border-gray-800 pl-7 py-5 transition-all duration-300; 
 }
 .tab-buttons .content-title.active-title{
-    @apply text-primary border-primary transition-all duration-300;
+    @apply text-white border-white transition-all duration-300;
 }
 
 .active-content{
@@ -84,7 +106,7 @@ p{
 }
 
 .sec-content p{
-    @apply lg:text-2xl font-semibold lg:pt-36 lg:pb-36 px-5; 
+    @apply lg:text-2xl font-semibold lg:pt-36 lg:pb-36 px-5 text-gray-500; 
 }
 
 /* Consulting section */
@@ -104,12 +126,12 @@ p{
     @apply after:block after:top-0 after:bottom-0 after:left-0 after:right-0;
 }
 .single h4{
-    @apply font-bold text-xl;
+    @apply font-bold text-xl text-white;
 }
 .post-body{
-    @apply p-5 space-y-8;
+    @apply p-5 space-y-8 text-white;
 }
-
+.blogg .btn-secondary
 /* Booking Sec */
 hr{
     @apply border-primary opacity-30;
@@ -134,17 +156,18 @@ hr{
 ul.nav li{
     @apply relative;
 }
+.item-has-sub-menu ul li::after{
+    display: none;
+}
 .item-has-sub-menu li{
     @apply p-4; 
 }
-.item-has-sub-menu li a{
-    color: white !important;
-}
+
 .item-has-sub-menu ul li:hover{
-    @apply bg-primary;
+    @apply bg-white text-heading;
 }
 .item-has-sub-menu ul{
-    @apply mt-5 lg:mt-0 hidden lg:absolute lg:top-full text-heading lg:min-w-max w-full bg-[#ff9199] font-normal;
+    @apply mt-5 lg:mt-0 hidden lg:absolute lg:top-full text-white lg:min-w-max w-full bg-heading font-normal;
 }
 .item-has-sub-menu:hover ul{
     @apply block;
@@ -191,7 +214,7 @@ ul.nav li{
     --animate-delay: 0.7s;
     --animate-duration: .7s;
 }
-.ta-kontakt h2,.ta-kontakt .btn,
+
 .slider .tab-buttons,
 .slider .sec-content,
 .consulting .leftCol,
@@ -205,7 +228,7 @@ ul.nav li{
 {
     opacity: 0;
 }
-.ta-kontakt h2.animate__animated,.ta-kontakt .btn.animate__animated,
+
 .slider .tab-buttons.animate__animated,
 .slider .sec-content.animate__animated,
 .consulting .leftCol.animate__animated,
