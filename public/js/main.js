@@ -135,4 +135,14 @@ $(document).ready(function () {
     },{
         offset:'50%'
     });
+
+
+
+    // Swiper JS
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
 });

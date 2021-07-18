@@ -1454,13 +1454,6 @@ p {
   color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
-@media (min-width: 1024px) {
-  .content-title {
-    --tw-text-opacity: 1;
-    color: rgba(107, 114, 128, var(--tw-text-opacity));
-  }
-}
-
 .content-body {
   text-align: justify;
 }
@@ -1866,6 +1859,36 @@ ul.nav li {
 .form .rightCol.animate__animated
 {
   opacity: 1;
+}
+
+/* Swiper Slider in HJEM Page */
+
+.swiper-container {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
 .hover\:bg-primary:hover {

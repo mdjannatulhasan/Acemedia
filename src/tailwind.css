@@ -86,7 +86,7 @@ p{
     @apply text-heading lg:text-4xl text-3xl font-bold leading-normal;
 }
 .content-title{
-    @apply text-2xl text-white lg:text-gray-500 font-bold ;
+    @apply text-2xl text-white font-bold ;
 }
 .content-body{
     @apply lg:w-9/12 text-justify;
@@ -257,3 +257,11 @@ ul.nav li{
 
 
 /* Swiper Slider in HJEM Page */
+.swiper-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .swiper-slide {
+      @apply text-center text-lg text-white items-center flex flex-col mx-auto justify-center space-y-4;
+  }
