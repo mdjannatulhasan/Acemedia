@@ -1261,6 +1261,29 @@ header {
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgba(59, 65, 60, var(--tw-border-opacity));
+  background-color: transparent;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 300ms;
+}
+
+.btn-secondary:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(59, 65, 60, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.consulting .btn-secondary {
+  border-radius: 0.5rem;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgba(59, 65, 60, var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgba(59, 65, 60, var(--tw-bg-opacity));
   padding-top: 0.75rem;
@@ -1275,10 +1298,10 @@ header {
   transition-duration: 300ms;
 }
 
-.btn-secondary:hover {
+.consulting .btn-secondary:hover {
   background-color: transparent;
   --tw-text-opacity: 1;
-  color: rgba(59, 65, 60, var(--tw-text-opacity));
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
 }
 
 /* Responsive menu classes */
