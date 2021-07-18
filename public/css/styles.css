@@ -1320,6 +1320,10 @@ header img {
   display: none;
 }
 
+#toggler-icon{
+  margin-top: 0;
+}
+
 #cross {
   position: absolute;
   right: 7%;

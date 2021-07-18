@@ -38,7 +38,9 @@ header img{
 .nav-hidden {
     @apply hidden;
 }
-
+#toggler-icon{
+    margin-top: 0;
+}
 #cross {
     position: absolute;
     right: 7%;

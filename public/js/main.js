@@ -25,7 +25,7 @@ $(document).ready(function () {
     $("#mobile-meny").click(function () {
         $("#mobile-meny").toggle("active");
     });
-
+    
     const secOne = document.querySelectorAll(".slider .sec-content");
     const options = {
         root:null,
@@ -135,20 +135,20 @@ $(document).ready(function () {
     },{
         offset:'50%'
     });
-
-
-
+    
+    
+    
     // Swiper JS
     var swiper = new Swiper(".mySwiper", {
         spaceBetween: 30,
         pagination: {
-          el: ".swiper-pagination",
+            el: ".swiper-pagination",
         },
-      });
-    //   var swiper2 = new Swiper(".mySwiper2", {
-    //     spaceBetween: 30,
-    //     pagination: {
-    //       el: ".swiper-pagination",
-    //     },
-    //   });
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
 });
