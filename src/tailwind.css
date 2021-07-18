@@ -181,7 +181,9 @@ ul.nav li{
 }
 .list-items li {flex-basis: 50%;}
 @media (max-width:1200px) { .list-items li { flex-basis: 100%;} } 
-
+.site-service ul li{
+    @apply hover:bg-heading;
+}
 .service-contents > h2 {
     @apply text-3xl font-bold mb-5;
 }
