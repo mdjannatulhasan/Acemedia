@@ -1267,6 +1267,8 @@ header {
   padding-bottom: 0.75rem;
   padding-left: 1.75rem;
   padding-right: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
   transition-property: background-color, border-color, color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -1276,7 +1278,7 @@ header {
 .btn-secondary:hover {
   background-color: transparent;
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(59, 65, 60, var(--tw-text-opacity));
 }
 
 /* Responsive menu classes */
