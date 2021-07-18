@@ -71,12 +71,12 @@ $(document).ready(function () {
         offset:'50%'
     });
     $(".consulting .leftCol").waypoint(function(direction){
-        $(".consulting .leftCol").addClass('animate__animated animate__fadeInLeft animate__slow')
+        $(".consulting .leftCol").addClass('animate__animated animate__fadeInUp animate__slow')
     },{
         offset:'50%'
     });
     $(".consulting .rightCol").waypoint(function(direction){
-        $(".consulting .rightCol").addClass('animate__animated animate__fadeInRight animate__slow')
+        $(".consulting .rightCol").addClass('animate__animated animate__fadeInUp animate__slow animate__delay-1s')
     },{
         offset:'50%'
     });
@@ -91,19 +91,19 @@ $(document).ready(function () {
         offset:'50%'
     });
     $(".blogg .s-1").waypoint(function(direction){
-        $(".blogg .s-1").addClass('animate__animated animate__fadeInLeft animate__slow')
+        $(".blogg .s-1").addClass('animate__animated animate__fadeInUp animate__slow')
     },{
-        offset:'60%'
+        offset:'50%'
     });
     $(".blogg .s-2").waypoint(function(direction){
-        $(".blogg .s-2").addClass('animate__animated animate__fadeInUp animate__slow')
+        $(".blogg .s-2").addClass('animate__animated animate__fadeInUp animate__slow animate__delay-1s')
     },{
-        offset:'60%'
+        offset:'50%'
     });
     $(".blogg .s-3").waypoint(function(direction){
-        $(".blogg .s-3").addClass('animate__animated animate__fadeInRight animate__slow')
+        $(".blogg .s-3").addClass('animate__animated animate__fadeInUp animate__slow animate__delay-2s')
     },{
-        offset:'60%'
+        offset:'50%'
     });
     $(".booking .b1").waypoint(function(direction){
         $(".booking .b1").addClass('animate__animated animate__fadeInTopLeft animate__slow')
@@ -126,12 +126,12 @@ $(document).ready(function () {
         offset:'70%'
     });
     $(".form .leftCol").waypoint(function(direction){
-        $(".form .leftCol").addClass('animate__animated animate__fadeInLeft animate__slow')
+        $(".form .leftCol").addClass('animate__animated animate__fadeInUp animate__slow')
     },{
         offset:'50%'
     });
     $(".form .rightCol").waypoint(function(direction){
-        $(".form .rightCol").addClass('animate__animated animate__fadeInRight animate__slow')
+        $(".form .rightCol").addClass('animate__animated animate__fadeInUp animate__slow animate__delay-1s')
     },{
         offset:'50%'
     });
@@ -145,7 +145,7 @@ $(document).ready(function () {
           el: ".swiper-pagination",
         },
       });
-      var swiper = new Swiper(".mySwiper2", {
+      var swiper2 = new Swiper(".mySwiper2", {
         spaceBetween: 30,
         pagination: {
           el: ".swiper-pagination",

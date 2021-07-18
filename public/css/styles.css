@@ -1225,8 +1225,15 @@ header {
   position: sticky;
   top: 0px;
   z-index: 40;
+  height: 80%;
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
+
+@media (min-width: 1024px) {
+  header {
+    height: auto;
+  }
 }
 
 /* Button */
@@ -1259,7 +1266,7 @@ header {
   color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
-.form .btn-secondary, header .btn-secondary {
+.form .btn-secondary, header .btn-secondary, .ta-kontakt .btn-secondary {
   --tw-border-opacity: 1;
   border-color: rgba(59, 65, 60, var(--tw-border-opacity));
 }
