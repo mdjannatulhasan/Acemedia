@@ -1186,10 +1186,6 @@ select {
   line-height: 1.75rem;
 }
 
-.text-\[38px\] {
-  font-size: 38px;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -2191,6 +2187,10 @@ ul.nav li {
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:text-\[38px\] {
+    font-size: 38px;
   }
 
   .lg\:text-\[64px\] {
