@@ -292,3 +292,24 @@ ul.nav li{
     left: 0px;
     width: 100%;
 }
+
+a.custom-link-design{
+    @apply relative;
+
+}
+a.custom-link-design::after{
+    content: '';
+    width: 80%;
+    height: 2px;
+    position: absolute;
+    background: white;
+    bottom: -5px;
+    right: 0;
+    transform: scaleX(0);
+    transition: transform 350ms ease;
+    transform-origin: right;
+}
+a.custom-link-design:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
