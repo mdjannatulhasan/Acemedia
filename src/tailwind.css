@@ -313,3 +313,7 @@ a.custom-link-design:hover::after{
     transform: scaleX(1);
     transform-origin: left;
 }
+.calc-bg{
+    background:linear-gradient(to right bottom, rgba(0, 0, 0,0.78), rgba(0, 0, 0,0.78)) !important;
+    /* background-size:100% !important; */
+}

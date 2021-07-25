@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acemedia</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" />
+    <script src="https://kit.fontawesome.com/74ffea834f.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body style="background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.78)), url('images/calc-bg.png'); background-size: 100% !important">
+    <section id="root" class="flex flex-col justify-between py-12 lg:pt-44 lg:pb-16">
+        <div class="container text-center text-white space-y-8 lg:space-y-16 py-10 lg:py-0" v-show="currentStep == 1">
+            <img class="mx-auto" src="images/image 2.svg" alt="" />
+            <div class="lg:text-[38px] text-2xl font-semibold leading-normal">Få et prisestimat på din nye nettside, med en gang!</div>
+            <p class="lg:w-6/12 mx-auto opacity-70">Svar oss på noen enkle spørsmål så gir vi deg en “fra-pris” uten noen som helst form for forpliktelse.</p>
+            <div>
+                <button href="" @click="currentStep++" class="btn-secondary calc hover:border-white">Sett I gang</button>
+            </div>
+        </div>
+
+        
+        <div class="container" v-show="currentStep > 1" >
+            <button @click="goToPrevStep"class="custom-link-design text-white z-10" href=""><i class="fas fa-arrow-left mr-5"></i>Forrige spørsmål</button>
+        </div>
+
+        <!-- Calculator 1 -->
+        <div class="container text-center text-white space-y-10 lg:space-y-20 py-10 lg:py-0" v-show="currentStep == 2">
+            <img class="mx-auto" src="images/image 3.png" alt="" />
+            <div class="lg:text-[38px] text-2xl font-semibold leading-normal">Når må prosjektet være ferdig?</div>
+            <div class="flex justify-center lg:space-x-9 lg:space-y-0 space-y-9 flex-col lg:flex-row">
+                <button @click="setProjectPriority" data-priority="1" data-cost="2500" class="btn-secondary calc hover:border-white">Ingen hast (2,500)</button>
+                <button  @click="setProjectPriority" data-priority="2" data-cost="5000" class="btn-secondary calc hover:border-white" class="btn-secondary calc hover:border-white">Så fort som mulig (5,000)</button>
+                <button  @click="setProjectPriority" data-priority="3" data-cost="10000" class="btn-secondary calc hover:border-white" class="btn-secondary calc hover:border-white">Ekspress levering! (10,000)</button>
+            </div>
+        </div>
+        <div class="container text-center text-white space-y-10 lg:space-y-20 py-10 lg:py-0"  v-show="currentStep == 3">
+            <img class="mx-auto" src="images/Saly-13.png" alt="" />
+            <div class="lg:text-[38px] text-2xl font-semibold leading-normal">Vil du ha hjelp med Markedsføring eller Webside/app utvikling?</div>
+            <div class="flex justify-center lg:space-x-9 lg:space-y-0 space-y-9 flex-col lg:flex-row">
+                <button @click="setMarketing" data-marketing="1" data-cost="5000" class="btn-secondary calc hover:border-white">Markedsføring (5,000)</button>
+                <button @click="setMarketing" data-marketing="2" data-cost="25000" class="btn-secondary calc hover:border-white">Webside/Apputvikling (25,000)</button>
+                <button @click="setMarketing" data-marketing="3" data-cost="30000" class="btn-secondary calc hover:border-white">Begge deler (30,000)</button>
+            </div>
+        </div>
+
+        <div class="container text-center text-white space-y-10 lg:space-y-20 py-10 lg:py-0" v-show="currentStep == 4">
+            <img class="mx-auto" src="images/9.png" alt="" />
+            <div class="lg:text-[38px] text-2xl font-semibold leading-normal">Skal nettsiden fungere som en webshop?</div>
+            <div class="flex justify-center lg:space-x-9 lg:space-y-0 space-y-9 flex-col lg:flex-row">
+                <button @click="setWebShop" data-cost="10000" data-is-web-shop="true" class="btn-secondary calc hover:border-white">Ja  (10,000)</button>
+                <button @click="setWebShop" data-cost="0" data-is-web-shop="true" class="btn-secondary calc hover:border-white">Nei (0)</button>
+            </div>
+        </div>
+
+        <div class="container text-center text-white space-y-10 lg:space-y-20 py-10 lg:py-0" v-show="currentStep == 5">
+            <img class="mx-auto" src="images/Saly-26.png" alt="" />
+            <div class="lg:text-[38px] text-2xl font-semibold leading-normal">Vil du ha innholdsproduksjon?</div>
+            <div class="flex justify-center lg:space-x-9 lg:space-y-0 space-y-9 flex-col lg:flex-row">
+                <button @click="setProduction" data-production="1" data-cost="5000" class="btn-secondary calc hover:border-white">Ja, til markedsføring innhold (5,000)</button>
+                <button @click="setProduction" data-production="2" data-cost="5000" class="btn-secondary calc hover:border-white">Ja, til webside/app (5,000)</button>
+                <button @click="setProduction" data-production="3" data-cost="0" class="btn-secondary calc hover:border-white">Nei (0)</button>
+            </div>
+        </div>
+
+        <div class="container text-center text-white space-y-10 lg:space-y-20 py-10 lg:py-0" v-show="currentStep == 6">
+            <img class="mx-auto" src="images/Saly-10.png" alt="" />
+            <div class="lg:text-[38px] text-2xl font-semibold leading-normal">Skal nettsiden integreres mot et annet system? F Eks regnskapssystem eller Lager?</div>
+            <div class="flex justify-center lg:space-x-9 lg:space-y-0 space-y-9 flex-col lg:flex-row">
+                <button @click="setLager" data-cost="10000" data-is-lager="true" href="" class="btn-secondary calc hover:border-white">Ja (2,500)</button>
+                <button @click="setLager" data-cost="0" data-is-lager="false" href="" class="btn-secondary calc hover:border-white">Nei (0)</button>
+            </div>
+        </div>
+        <div class="text-white">
+            <pre>{{ JSON.stringify($data) }}</pre>
+        </div>
+        
+        <div class="container lg:pt-10">
+            <img class="float-right" src="images/logo.svg" alt="" />
+        </div>
+    </section>
+    
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    currentStep: 1,
+                    projectPriority: 0,
+                    sMarketing: 0,
+                    sProduction: 0,
+                    totalCost: 0,
+                    webShop: false,
+                    sLager: false,
+                };
+            },
+            methods: {
+                setProjectPriority(e) {
+                    const priority = parseInt(e.target.dataset.priority);
+                    const cost = parseInt(e.target.dataset.cost);
+                    this.totalCost += cost;
+                    this.projectPriority = priority;
+                    this.currentStep++;
+                },
+                setMarketing(e) {
+                    const marketing = parseInt(e.target.dataset.marketing);
+                    const cost = parseInt(e.target.dataset.cost);
+                    this.totalCost += cost;
+                    this.sMarketing = marketing;
+                    this.currentStep++;
+                },
+                setProduction(e) {
+                    const production = parseInt(e.target.dataset.production);
+                    const cost = parseInt(e.target.dataset.cost);
+                    this.totalCost += cost;
+                    this.sProduction = production;
+                    this.currentStep++;
+                },
+                setWebShop(e) {
+                    const isWebShop = e.target.dataset.isWebShop === "true" ? true : false;
+                    const cost = parseInt(e.target.dataset.cost);
+                    this.totalCost += cost;
+                    this.webShop = isWebShop;
+                    this.currentStep++;
+                },
+                setLager(e) {
+                    const lager = e.target.dataset.lager === "true" ? true : false;
+                    const cost = parseInt(e.target.dataset.cost);
+                    this.totalCost += cost;
+                    this.sLager = lager;
+                    this.currentStep++;
+                },
+                goToPrevStep() {
+                    // run this only if we are coming from step 3
+                    this.currentStep--;
+                    if (this.currentStep == 2) {
+                        const button = document.querySelector(`[data-priority="${this.projectPriority}"]`);
+                        const cost = button.dataset.cost;
+                        this.totalCost -= cost;
+                    }
+                    if (this.currentStep == 3) {
+                        const button = document.querySelector(`[data-marketing="${this.sMarketing}"]`);
+                        const cost = button.dataset.cost;
+                        this.totalCost -= cost;
+                    }
+                    if (this.currentStep == 4) {
+                        const button = document.querySelector(`[data-is-web-shop="${this.webShop ? "true" : "false"}"]`);
+                        console.log(button);
+                        const cost = button.dataset.cost;
+                        this.totalCost -= cost;
+                        this.webShop = false;
+                    }
+                    if (this.currentStep == 5) {
+                        const button = document.querySelector(`[data-production="${this.sProduction}"]`);
+                        const cost = button.dataset.cost;
+                        this.totalCost -= cost;
+                    }
+                    if (this.currentStep == 4) {
+                        const button = document.querySelector(`[data-lager="${this.sLager ? "true" : "false"}"]`);
+                        console.log(button);
+                        const cost = button.dataset.cost;
+                        this.totalCost -= cost;
+                        this.sLager = false;
+                    }
+                },
+            },
+        }).mount("#root");
+    </script>
+</body>
+</html>
