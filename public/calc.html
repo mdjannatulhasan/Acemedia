@@ -76,6 +76,14 @@
                 <button @click="setLager" data-cost="0" data-is-lager="false" href="" class="btn-secondary calc hover:border-white">Nei (0)</button>
             </div>
         </div>
+        <div class="container text-center text-white space-y-10 lg:space-y-20 py-10 lg:py-0" v-show="currentStep == 7">
+            <img class="mx-auto" src="images/Saly-10.png" alt="" />
+            <div class="lg:text-[38px] text-2xl font-semibold leading-normal">All Done</div>
+            <div class="lg:text-[38px] text-2xl font-semibold leading-normal">Your total cost: <span id="total"></span></div>
+            <div class="flex justify-center lg:space-x-9 lg:space-y-0 space-y-9 flex-col lg:flex-row">
+                <button @click="setLager" data-cost="0" data-is-lager="false" href="" class="btn-secondary calc hover:border-white">Submit</button>
+            </div>
+        </div>
         <div class="text-white">
             <pre>{{ JSON.stringify($data) }}</pre>
         </div>
@@ -128,12 +136,17 @@
                     this.webShop = isWebShop;
                     this.currentStep++;
                 },
+                printCustom(){
+                    console.log("Sesh, Bangladesh");
+                },
                 setLager(e) {
                     const lager = e.target.dataset.lager === "true" ? true : false;
                     const cost = parseInt(e.target.dataset.cost);
                     this.totalCost += cost;
                     this.sLager = lager;
                     this.currentStep++;
+                    this.printCustom();
+
                 },
                 goToPrevStep() {
                     // run this only if we are coming from step 3
