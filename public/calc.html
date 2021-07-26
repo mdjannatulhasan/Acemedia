@@ -1,52 +1,49 @@
+<?php 
+// Template Name: Calculator
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Acemedia</title>
-
+    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" />
     <script src="https://kit.fontawesome.com/74ffea834f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
+    <?PHP wp_head() ?>
 </head>
-
-<body style="background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.78)), url('images/calc-bg.png'); background-size: 100% !important">
-    <section id="root" class="flex flex-col justify-between py-12 lg:pt-44 lg:pb-16">
+<body style="background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.78)), url('http://acemedia.local/wp-content/uploads/2021/07/calc-bg.png'); background-size: 100% !important">
+    <section id="root" class="flex flex-col justify-between py-12 lg:pt-24 lg:pb-16">
         <div class="container text-center text-white space-y-8 lg:space-y-16 py-10 lg:py-0" v-show="currentStep == 1">
             <img class="mx-auto" src="images/image 2.svg" alt="" />
             <div class="lg:text-[38px] text-2xl font-semibold leading-normal">Få et prisestimat på din nye nettside, med en gang!</div>
             <p class="lg:w-6/12 mx-auto opacity-70">Svar oss på noen enkle spørsmål så gir vi deg en “fra-pris” uten noen som helst form for forpliktelse.</p>
-            <div class="space-y-5">
-                <div class="grid grid-cols-2 gap-x-5 text-heading">
-                    <input v-model="name" type="text" class="form-input border-[#dadada] px-4 py-3 rounded-lg" placeholder="NAVN">
-                    <input v-model="email" type="email" class="form-input border-[#dadada] px-4 py-3 rounded-lg" placeholder="EPOST">
-                </div>
-            </div>
+            
             <div>
                 <button href="" @click="currentStep++" class="btn-secondary calc hover:border-white">Sett I gang</button>
             </div>
         </div>
-
-
-        <div class="container" v-show="currentStep > 1">
-            <button @click="goToPrevStep" class="custom-link-design text-white z-10" href=""><i class="fas fa-arrow-left mr-5"></i>Forrige spørsmål</button>
+        
+        
+        <div class="container" v-show="currentStep > 1" >
+            <button @click="goToPrevStep"class="custom-link-design text-white z-10" href=""><i class="fas fa-arrow-left mr-5"></i>Forrige spørsmål</button>
         </div>
-
+        
         <!-- Calculator 1 -->
         <div class="container text-center text-white space-y-10 lg:space-y-20 py-10 lg:py-0" v-show="currentStep == 2">
             <img class="mx-auto" src="images/image 3.png" alt="" />
             <div class="lg:text-[38px] text-2xl font-semibold leading-normal">Når må prosjektet være ferdig?</div>
             <div class="flex justify-center lg:space-x-9 lg:space-y-0 space-y-9 flex-col lg:flex-row">
                 <button @click="setProjectPriority" data-priority="1" data-cost="2500" class="btn-secondary calc hover:border-white">Ingen hast (2,500)</button>
-                <button @click="setProjectPriority" data-priority="2" data-cost="5000" class="btn-secondary calc hover:border-white" class="btn-secondary calc hover:border-white">Så fort som mulig (5,000)</button>
-                <button @click="setProjectPriority" data-priority="3" data-cost="10000" class="btn-secondary calc hover:border-white" class="btn-secondary calc hover:border-white">Ekspress levering! (10,000)</button>
+                <button  @click="setProjectPriority" data-priority="2" data-cost="5000" class="btn-secondary calc hover:border-white" class="btn-secondary calc hover:border-white">Så fort som mulig (5,000)</button>
+                <button  @click="setProjectPriority" data-priority="3" data-cost="10000" class="btn-secondary calc hover:border-white" class="btn-secondary calc hover:border-white">Ekspress levering! (10,000)</button>
             </div>
         </div>
-        <div class="container text-center text-white space-y-10 lg:space-y-20 py-10 lg:py-0" v-show="currentStep == 3">
+        <div class="container text-center text-white space-y-10 lg:space-y-20 py-10 lg:py-0"  v-show="currentStep == 3">
             <img class="mx-auto" src="images/Saly-13.png" alt="" />
             <div class="lg:text-[38px] text-2xl font-semibold leading-normal">Vil du ha hjelp med Markedsføring eller Webside/app utvikling?</div>
             <div class="flex justify-center lg:space-x-9 lg:space-y-0 space-y-9 flex-col lg:flex-row">
@@ -55,16 +52,16 @@
                 <button @click="setMarketing" data-marketing="3" data-cost="30000" class="btn-secondary calc hover:border-white">Begge deler (30,000)</button>
             </div>
         </div>
-
+        
         <div class="container text-center text-white space-y-10 lg:space-y-20 py-10 lg:py-0" v-show="currentStep == 4">
             <img class="mx-auto" src="images/9.png" alt="" />
             <div class="lg:text-[38px] text-2xl font-semibold leading-normal">Skal nettsiden fungere som en webshop?</div>
             <div class="flex justify-center lg:space-x-9 lg:space-y-0 space-y-9 flex-col lg:flex-row">
-                <button @click="setWebShop" data-cost="10000" data-is-web-shop="true" class="btn-secondary calc hover:border-white">Ja (10,000)</button>
+                <button @click="setWebShop" data-cost="10000" data-is-web-shop="true" class="btn-secondary calc hover:border-white">Ja  (10,000)</button>
                 <button @click="setWebShop" data-cost="0" data-is-web-shop="true" class="btn-secondary calc hover:border-white">Nei (0)</button>
             </div>
         </div>
-
+        
         <div class="container text-center text-white space-y-10 lg:space-y-20 py-10 lg:py-0" v-show="currentStep == 5">
             <img class="mx-auto" src="images/Saly-26.png" alt="" />
             <div class="lg:text-[38px] text-2xl font-semibold leading-normal">Vil du ha innholdsproduksjon?</div>
@@ -74,28 +71,37 @@
                 <button @click="setProduction" data-production="3" data-cost="0" class="btn-secondary calc hover:border-white">Nei (0)</button>
             </div>
         </div>
-
+        
         <div class="container text-center text-white space-y-10 lg:space-y-20 py-10 lg:py-0" v-show="currentStep == 6">
             <img class="mx-auto" src="images/Saly-10.png" alt="" />
             <div class="lg:text-[38px] text-2xl font-semibold leading-normal">Skal nettsiden integreres mot et annet system? F Eks regnskapssystem eller Lager?</div>
             <div class="flex justify-center lg:space-x-9 lg:space-y-0 space-y-9 flex-col lg:flex-row">
-                <button @click="setLager" data-cost="2500" data-is-lager="true" href="" class="btn-secondary calc hover:border-white">Ja (2,500)</button>
-                <button @click="setLager" data-cost="0" data-is-lager="false" href="" class="btn-secondary calc hover:border-white">Nei (0)</button>
+                <button @click="setLager" data-costapi="2500" data-is-lager="true" href="" class="btn-secondary calc hover:border-white">Ja (2,500)</button>
+                <button @click="setLager" data-costapi="0" data-is-lager="false" href="" class="btn-secondary calc hover:border-white">Nei (0)</button>
             </div>
         </div>
-        <div class="container text-center text-white space-y-10 lg:space-y-20 py-10 lg:py-0" v-show="currentStep == 7">
+        <div class="container text-center space-y-8 text-white py-10 lg:py-0" v-show="currentStep == 7">
             <img class="mx-auto" src="images/Saly-10.png" alt="" />
-            <div class="lg:text-[38px] text-2xl font-semibold leading-normal">All Done</div>
             <div class="lg:text-[38px] text-2xl font-semibold leading-normal">Your total cost: <span id="total"></span></div>
+            <div class="space-y-5">
+                <div class="grid grid-cols-2 gap-x-5 text-heading">
+                    <input v-model="name" type="text" class="form-input border-[#dadada] px-4 py-3 rounded-lg" placeholder="Firmanavn">
+                    <input v-model="mobile" type="text" class="form-input border-[#dadada] px-4 py-3 rounded-lg" placeholder="Telefon">
+                </div>
+                <div class="grid grid-cols-1 gap-y-5">
+                    <input v-model="email" type="email" class="form-input border-[#dadada] px-4 py-3 rounded-lg" placeholder="Mail">
+                    <textarea  v-model="email" placeholder="Kommentar" class="form-input border-[#dadada] px-4 py-3 rounded-lg" cols="30" rows="4"></textarea>
+                </div>
+                
+            </div>
             <div class="flex justify-center lg:space-x-9 lg:space-y-0 space-y-9 flex-col lg:flex-row">
-                <button @click="handleSubmit" class="btn-secondary calc hover:border-white">Submit</button>
+                <button  @click="handleSubmit" class="btn-secondary calc hover:border-white">Send</button>
+            </div>
+            <div class="text-white text-xl">
+                Dette er ikke en bestilling, vi kontakter deg så snart som mulig for et uforpliktende tilbud.
             </div>
 
         </div>
-        <!-- <div class="text-white">
-            <pre>{{ JSON.stringify($data)}}</pre>
-        </div> -->
-
         <div class="container lg:pt-10">
             <img class="float-right" src="images/logo.svg" alt="" />
         </div>
@@ -113,12 +119,14 @@
                     sProduction: 0,
                     totalCost: 0,
                     webShop: false,
-                    customApi: false,
+                    sLager: false,
+                    priorityHtml: '',
                 };
             },
             methods: {
                 setProjectPriority(e) {
                     const priority = parseInt(e.target.dataset.priority);
+                    this.priorityHtml = e.target.innerHTML;
                     const cost = parseInt(e.target.dataset.cost);
                     this.totalCost += cost;
                     this.projectPriority = priority;
@@ -145,17 +153,17 @@
                     this.webShop = isWebShop;
                     this.currentStep++;
                 },
-                printCustom() {
+                printCustom(){
                     document.getElementById('total').innerHTML = this.totalCost;
                 },
                 setLager(e) {
-                    const lager = e.target.dataset.lager === "true" ? true : false;
-                    const cost = parseInt(e.target.dataset.cost);
-                    this.totalCost += cost;
-                    this.customApi = lager;
+                    const lager = e.target.dataset.isLager === "true" ? true : false;
+                    const cost2 = parseInt(e.target.dataset.costapi);
+                    this.totalCost += cost2;
+                    this.sLager = lager;
                     this.currentStep++;
                     this.printCustom();
-
+                    
                 },
                 goToPrevStep() {
                     // run this only if we are coming from step 3
@@ -172,6 +180,7 @@
                     }
                     if (this.currentStep == 4) {
                         const button = document.querySelector(`[data-is-web-shop="${this.webShop ? "true" : "false"}"]`);
+                        console.log(button);
                         const cost = button.dataset.cost;
                         this.totalCost -= cost;
                         this.webShop = false;
@@ -182,45 +191,16 @@
                         this.totalCost -= cost;
                     }
                     if (this.currentStep == 6) {
-                        const button = document.querySelector(`[data-lager="${this.customApi ? "true" : "false"}"]`);
-                        const cost = button.dataset.cost;
+                        const button = document.querySelector(`[data-is-lager="${this.sLager ? "true" : "false"}"]`);
+                        console.log(button);
+                        const cost = button.dataset.costapi;
                         this.totalCost -= cost;
-                        this.customApi = false;
+                        this.sLager = false;
                     }
                 },
-                handleSubmit() {
-
-                    let data = {
-                        "input_3": this.name,
-                        "input_2": this.email,
-                    }
-
-                    const form_id = 2;
-                    const username = "ck_e7aa37d81ab643999bcc94273c3778dee2f4e016";
-                    const password = "cs_a049ae21f4c02553791db32debfd0de73c95d6ff";
-
-                    let config = {
-                        "async": true,
-                        "crossDomain": true,
-                        "url": window.location.origin + "/wp-json/gf/v2/forms/" + form_id + "/submissions",
-                        "method": "POST",
-                        "headers": {
-                            "Content-Type": "application/json",
-                            "Authorization": "Basic " + btoa(username + ":" + password),
-                        },
-                        "processData": false,
-                        "data": JSON.stringify(data)
-                    };
-
-                    jQuery.ajax(config).done(function(res) {
-                        console.log(res);
-                    })
-
-                }
             },
         }).mount("#root");
     </script>
-
+    
 </body>
-
 </html>

@@ -961,6 +961,10 @@ select {
        column-gap: 1.25rem;
 }
 
+.gap-y-5 {
+  row-gap: 1.25rem;
+}
+
 .space-y-8 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
@@ -2194,8 +2198,8 @@ a.custom-link-design:hover::after{
     padding-top: 8rem;
   }
 
-  .lg\:pt-44 {
-    padding-top: 11rem;
+  .lg\:pt-24 {
+    padding-top: 6rem;
   }
 
   .lg\:pb-16 {
@@ -2206,8 +2210,8 @@ a.custom-link-design:hover::after{
     padding-top: 2.5rem;
   }
 
-  .lg\:pt-24 {
-    padding-top: 6rem;
+  .lg\:pt-44 {
+    padding-top: 11rem;
   }
 
   .lg\:text-\[64px\] {
